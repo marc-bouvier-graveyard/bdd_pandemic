@@ -2,22 +2,25 @@
 Feature: Infection
 
   Scenario: first infection
-    Given Paris is healthy
+    Given the occidental sub-network
     When Paris gets infected
     Then Paris infection level should be 1
 
   Scenario: second infection
-    Given Paris infection level is 1
+    Given the occidental sub-network
+    But Paris infection level is 1
     When Paris gets infected
     Then Paris infection level should be 2
 
   Scenario: third infection
-    Given Paris infection level is 2
+    Given the occidental sub-network
+    But Paris infection level is 2
     When Paris gets infected
     Then Paris infection level should be 3
 
   Scenario: fourth infection
-    Given Paris infection level is 3
+    Given the occidental sub-network
+    But Paris infection level is 3
     When Paris gets infected
     Then Paris infection level should remain at 3
 

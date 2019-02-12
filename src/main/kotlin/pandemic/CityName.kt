@@ -1,6 +1,6 @@
-package pandemic;
+package pandemic
 
-public enum CityName {
+enum class CityName {
     Paris,
     NewYork,
     London,

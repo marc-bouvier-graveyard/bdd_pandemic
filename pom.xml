@@ -16,12 +16,12 @@
             <version>4.2.3</version>
             <scope>test</scope>
         </dependency>
-        <!--<dependency>
+        <dependency>
             <groupId>io.cucumber</groupId>
-            <artifactId>cucumber-jvm</artifactId>
+            <artifactId>cucumber-picocontainer</artifactId>
             <version>4.2.3</version>
             <scope>test</scope>
-        </dependency>-->
+        </dependency>
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-junit</artifactId>

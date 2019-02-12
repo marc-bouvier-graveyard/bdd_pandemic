@@ -1,4 +1,4 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("classpath:pandemic/infection.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/pandemic/infection.feature");
 formatter.feature({
   "name": "Infection",
   "description": "",
@@ -10,11 +10,11 @@ formatter.scenario({
   "keyword": "Scenario"
 });
 formatter.step({
-  "name": "Paris is healthy",
+  "name": "the occidental sub-network",
   "keyword": "Given "
 });
 formatter.match({
-  "location": "InfectionSteps.paris_is_healthy(CityName)"
+  "location": "StandardDefinitionSteps.the_occidental_sub_network()"
 });
 formatter.result({
   "status": "passed"
@@ -45,8 +45,18 @@ formatter.scenario({
   "keyword": "Scenario"
 });
 formatter.step({
-  "name": "Paris infection level is 1",
+  "name": "the occidental sub-network",
   "keyword": "Given "
+});
+formatter.match({
+  "location": "StandardDefinitionSteps.the_occidental_sub_network()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Paris infection level is 1",
+  "keyword": "But "
 });
 formatter.match({
   "location": "InfectionSteps.paris_infection_level_is(CityName,int)"
@@ -80,8 +90,18 @@ formatter.scenario({
   "keyword": "Scenario"
 });
 formatter.step({
-  "name": "Paris infection level is 2",
+  "name": "the occidental sub-network",
   "keyword": "Given "
+});
+formatter.match({
+  "location": "StandardDefinitionSteps.the_occidental_sub_network()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Paris infection level is 2",
+  "keyword": "But "
 });
 formatter.match({
   "location": "InfectionSteps.paris_infection_level_is(CityName,int)"
@@ -115,8 +135,18 @@ formatter.scenario({
   "keyword": "Scenario"
 });
 formatter.step({
-  "name": "Paris infection level is 3",
+  "name": "the occidental sub-network",
   "keyword": "Given "
+});
+formatter.match({
+  "location": "StandardDefinitionSteps.the_occidental_sub_network()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Paris infection level is 3",
+  "keyword": "But "
 });
 formatter.match({
   "location": "InfectionSteps.paris_infection_level_is(CityName,int)"
@@ -144,7 +174,7 @@ formatter.match({
 formatter.result({
   "status": "passed"
 });
-formatter.uri("classpath:pandemic/outbreak_counter.feature");
+formatter.uri("file:src/test/resources/pandemic/outbreak_counter.feature");
 formatter.feature({
   "name": "outbreak counter",
   "description": "",
@@ -156,8 +186,18 @@ formatter.scenario({
   "keyword": "Scenario"
 });
 formatter.step({
-  "name": "Paris infection level is 3",
+  "name": "the occidental sub-network",
   "keyword": "Given "
+});
+formatter.match({
+  "location": "StandardDefinitionSteps.the_occidental_sub_network()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Paris infection level is 3",
+  "keyword": "But "
 });
 formatter.match({
   "location": "InfectionSteps.paris_infection_level_is(CityName,int)"
@@ -201,8 +241,18 @@ formatter.scenario({
   "keyword": "Scenario"
 });
 formatter.step({
-  "name": "Paris infection level is 3",
+  "name": "the occidental sub-network",
   "keyword": "Given "
+});
+formatter.match({
+  "location": "StandardDefinitionSteps.the_occidental_sub_network()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Paris infection level is 3",
+  "keyword": "But "
 });
 formatter.match({
   "location": "InfectionSteps.paris_infection_level_is(CityName,int)"
@@ -250,7 +300,7 @@ formatter.match({
 formatter.result({
   "status": "passed"
 });
-formatter.uri("classpath:pandemic/standard_definition.feature");
+formatter.uri("file:src/test/resources/pandemic/standard_definition.feature");
 formatter.feature({
   "name": "standard definition",
   "description": "",
@@ -266,7 +316,7 @@ formatter.step({
   "keyword": "Given "
 });
 formatter.match({
-  "location": "InfectionSteps.the_occidental_sub_network()"
+  "location": "StandardDefinitionSteps.the_occidental_sub_network()"
 });
 formatter.result({
   "status": "passed"
@@ -276,21 +326,20 @@ formatter.step({
   "keyword": "Then "
 });
 formatter.match({
-  "location": "InfectionSteps.should_be_linked_to(String,String)"
+  "location": "StandardDefinitionSteps.should_be_linked_to(String,String)"
 });
 formatter.result({
-  "error_message": "cucumber.api.PendingException: TODO: implement me\n\tat pandemic.InfectionSteps.should_be_linked_to(InfectionSteps.kt:87)\n\tat ✽.NewYork should be linked to London, Madrid(classpath:pandemic/standard_definition.feature:8)\n",
-  "status": "pending"
+  "status": "passed"
 });
 formatter.step({
   "name": "Paris should be linked to Algiers, Milan, Essen, London, Madrid",
   "keyword": "And "
 });
 formatter.match({
-  "location": "InfectionSteps.should_be_linked_to(String,String)"
+  "location": "StandardDefinitionSteps.should_be_linked_to(String,String)"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
   "name": "Paris infection level should be 0",
@@ -300,7 +349,7 @@ formatter.match({
   "location": "InfectionSteps.paris_infection_level_should_be(CityName,int)"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
   "name": "NewYork infection level should be 0",
@@ -310,7 +359,7 @@ formatter.match({
   "location": "InfectionSteps.paris_infection_level_should_be(CityName,int)"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
   "name": "London infection level should be 0",
@@ -320,7 +369,7 @@ formatter.match({
   "location": "InfectionSteps.paris_infection_level_should_be(CityName,int)"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
   "name": "Algiers infection level should be 0",
@@ -330,7 +379,7 @@ formatter.match({
   "location": "InfectionSteps.paris_infection_level_should_be(CityName,int)"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
   "name": "Milan infection level should be 0",
@@ -340,7 +389,7 @@ formatter.match({
   "location": "InfectionSteps.paris_infection_level_should_be(CityName,int)"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
   "name": "Essen infection level should be 0",
@@ -350,7 +399,7 @@ formatter.match({
   "location": "InfectionSteps.paris_infection_level_should_be(CityName,int)"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
   "name": "Madrid infection level should be 0",
@@ -360,6 +409,6 @@ formatter.match({
   "location": "InfectionSteps.paris_infection_level_should_be(CityName,int)"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 });
