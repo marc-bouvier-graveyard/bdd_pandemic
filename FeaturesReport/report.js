@@ -1,158 +1,251 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("classpath:hellocucumber/is_it_friday_yet.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("classpath:pandemic/infection.feature");
 formatter.feature({
-  "name": "Is it Friday yet?",
-  "description": "    Everybody wants to know when it\u0027s Friday",
+  "name": "Infection",
+  "description": "",
   "keyword": "Feature"
 });
-formatter.scenarioOutline({
-  "name": "Today is or is not Friday",
-  "description": "",
-  "keyword": "Scenario Outline"
-});
-formatter.step({
-  "name": "today is \"\u003cday\u003e\"",
-  "keyword": "Given "
-});
-formatter.step({
-  "name": "I ask whether it\u0027s friday yet",
-  "keyword": "When "
-});
-formatter.step({
-  "name": "I should be told \"\u003canswer\u003e\"",
-  "keyword": "Then "
-});
-formatter.examples({
-  "name": "",
-  "description": "",
-  "keyword": "Examples",
-  "rows": [
-    {
-      "cells": [
-        "day",
-        "answer"
-      ]
-    },
-    {
-      "cells": [
-        "Friday",
-        "TGIF"
-      ]
-    },
-    {
-      "cells": [
-        "Sunday",
-        "Nope"
-      ]
-    },
-    {
-      "cells": [
-        "anything else",
-        "Nope"
-      ]
-    }
-  ]
-});
 formatter.scenario({
-  "name": "Today is or is not Friday",
+  "name": "first infection",
   "description": "",
-  "keyword": "Scenario Outline"
+  "keyword": "Scenario"
 });
 formatter.step({
-  "name": "today is \"Friday\"",
+  "name": "Paris is healthy",
   "keyword": "Given "
 });
 formatter.match({
-  "location": "Stepdefs.today_is(String)"
+  "location": "InfectionSteps.paris_is_healthy(CityName)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "I ask whether it\u0027s friday yet",
+  "name": "Paris gets infected",
   "keyword": "When "
 });
 formatter.match({
-  "location": "Stepdefs.i_ask_whether_it_s_friday_yet()"
+  "location": "InfectionSteps.paris_gets_infected()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "I should be told \"TGIF\"",
+  "name": "Paris infection level should be 1",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "Stepdefs.i_should_be_told(String)"
+  "location": "InfectionSteps.paris_infection_level_should_be(CityName,int)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.scenario({
-  "name": "Today is or is not Friday",
+  "name": "second infection",
   "description": "",
-  "keyword": "Scenario Outline"
+  "keyword": "Scenario"
 });
 formatter.step({
-  "name": "today is \"Sunday\"",
+  "name": "Paris infection level is 1",
   "keyword": "Given "
 });
 formatter.match({
-  "location": "Stepdefs.today_is(String)"
+  "location": "InfectionSteps.paris_infection_level_is(CityName,int)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "I ask whether it\u0027s friday yet",
+  "name": "Paris gets infected",
   "keyword": "When "
 });
 formatter.match({
-  "location": "Stepdefs.i_ask_whether_it_s_friday_yet()"
+  "location": "InfectionSteps.paris_gets_infected()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "I should be told \"Nope\"",
+  "name": "Paris infection level should be 2",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "Stepdefs.i_should_be_told(String)"
+  "location": "InfectionSteps.paris_infection_level_should_be(CityName,int)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.scenario({
-  "name": "Today is or is not Friday",
+  "name": "third infection",
   "description": "",
-  "keyword": "Scenario Outline"
+  "keyword": "Scenario"
 });
 formatter.step({
-  "name": "today is \"anything else\"",
+  "name": "Paris infection level is 2",
   "keyword": "Given "
 });
 formatter.match({
-  "location": "Stepdefs.today_is(String)"
+  "location": "InfectionSteps.paris_infection_level_is(CityName,int)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "I ask whether it\u0027s friday yet",
+  "name": "Paris gets infected",
   "keyword": "When "
 });
 formatter.match({
-  "location": "Stepdefs.i_ask_whether_it_s_friday_yet()"
+  "location": "InfectionSteps.paris_gets_infected()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "I should be told \"Nope\"",
+  "name": "Paris infection level should be 3",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "Stepdefs.i_should_be_told(String)"
+  "location": "InfectionSteps.paris_infection_level_should_be(CityName,int)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "fourth infection",
+  "description": "",
+  "keyword": "Scenario"
+});
+formatter.step({
+  "name": "Paris infection level is 3",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "InfectionSteps.paris_infection_level_is(CityName,int)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Paris gets infected",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "InfectionSteps.paris_gets_infected()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Paris infection level should remain at 3",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "InfectionSteps.paris_infection_level_should_be(CityName,int)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.uri("classpath:pandemic/outbreak_counter.feature");
+formatter.feature({
+  "name": "outbreak counter",
+  "description": "",
+  "keyword": "Feature"
+});
+formatter.scenario({
+  "name": "single outbreak",
+  "description": "",
+  "keyword": "Scenario"
+});
+formatter.step({
+  "name": "Paris infection level is 3",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "InfectionSteps.paris_infection_level_is(CityName,int)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "outbreak counter is 0",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "InfectionSteps.outbreak_counter_is(int)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Paris gets infected",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "InfectionSteps.paris_gets_infected()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "outbreak counter should be 1",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "InfectionSteps.outbreak_counter_should_be(int)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "final outbreak",
+  "description": "",
+  "keyword": "Scenario"
+});
+formatter.step({
+  "name": "Paris infection level is 3",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "InfectionSteps.paris_infection_level_is(CityName,int)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "outbreak counter is 7",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "InfectionSteps.outbreak_counter_is(int)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Paris gets infected",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "InfectionSteps.paris_gets_infected()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "outbreak counter should be 8",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "InfectionSteps.outbreak_counter_should_be(int)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "the game should be lost",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "InfectionSteps.the_game_should_be_lost()"
 });
 formatter.result({
   "status": "passed"
