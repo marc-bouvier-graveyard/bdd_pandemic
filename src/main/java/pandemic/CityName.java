@@ -1,5 +1,11 @@
 package pandemic;
 
 public enum CityName {
-    Paris
+    Paris,
+    NewYork,
+    London,
+    Algiers,
+    Milan,
+    Essen,
+    Madrid
 }

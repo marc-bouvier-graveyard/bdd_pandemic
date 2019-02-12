@@ -2,6 +2,13 @@
 Feature: outbreak counter
   # Enter feature description here
 
+#  Scenario: single outbreak
+#    Given Paris infection level is 3
+#    And outbreak counter is 0
+#    When Paris gets infected
+#    Then outbreak counter should be 1
+
+  # hook pour utiliser la persona
   Scenario: single outbreak
     Given Paris infection level is 3
     And outbreak counter is 0

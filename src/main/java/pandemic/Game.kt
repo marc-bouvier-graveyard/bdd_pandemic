@@ -1,8 +1,8 @@
 package pandemic
 
-class Game(var cities: Map<CityName, City>, var outbreakCounter: OutbreakCounter) {
+class Game(var network: Network, var outbreakCounter: OutbreakCounter) {
     fun infect(paris: City) {
-        val city = this.cities[paris.cityName]
+        val city = this.network.city(paris.cityName)
         if (city?.infectionLevel == 3) {
             increaseOutbreakCounter()
         }
